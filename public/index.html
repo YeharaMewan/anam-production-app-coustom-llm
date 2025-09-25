@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Custom LLM Persona - Anam Integration</title>
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+    <div class="app-container">
+        <h1 class="app-title">Anam Persona</h1>
+
+        <main class="main-grid">
+            <!-- Persona Panel -->
+            <section class="card persona-panel" aria-label="AI Persona Video Interface">
+                <div class="card-content">
+                    <div class="video-container">
+                        <video id="persona-video"
+                               class="persona-video"
+                               autoplay
+                               playsinline
+                               aria-label="AI Persona Video Stream"></video>
+                    </div>
+
+
+                    <div class="button-group">
+                        <button id="start-button"
+                                class="btn btn-primary">
+                            <span aria-hidden="true">▶️</span>
+                            Start Conversation
+                        </button>
+                        <button id="stop-button"
+                                class="btn btn-danger"
+                                disabled>
+                            <span aria-hidden="true">⏹️</span>
+                            Stop Conversation
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Chat Panel -->
+            <section class="card chat-panel" aria-label="Conversation History">
+                <div class="card-content">
+                    <h2 class="section-title">
+                        <span aria-hidden="true">💬</span>
+                        Conversation
+                    </h2>
+                    <div id="chat-history"
+                         class="chat-history"
+                         role="log"
+                         aria-live="polite"
+                         aria-label="Chat Messages"
+                         tabindex="0">
+                        <div class="chat-empty-state">
+                            <span aria-hidden="true">👋</span>
+                            <span>Start a conversation to see your chat history...</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script type="module" src="script.js"></script>
+</body>
+
+</html>
